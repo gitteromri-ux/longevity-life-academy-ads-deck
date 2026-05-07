@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Longevity Life Academy — Google Ads Search Mockups</title>
+<meta name="description" content="Google Ads search campaign mockups for Longevity Life Academy. 3 ad groups, 6 mockups, April 2026." />
+<meta name="theme-color" content="#f1f1f3" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a1aff'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='800' font-size='34' fill='white' dominant-baseline='middle'%3EL%3C/text%3E%3C/svg%3E" />
+<style>
+  :root{
+    --bg:#eef0f3;
+    --panel:#ffffff;
+    --ink:#0c0d10;
+    --muted:#5b6474;
+    --line:rgba(0,0,0,.08);
+    --accent:#1a1aff;
+    --shadow: 0 10px 40px rgba(15,18,30,.10), 0 2px 8px rgba(15,18,30,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body{min-height:100svh;display:flex;flex-direction:column}
+
+  header.bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding: 14px 20px;
+    border-bottom:1px solid var(--line);
+    background: rgba(255,255,255,.7);
+    backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    position:sticky;top:0;z-index:5;
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .brand-mark{
+    width:28px;height:28px;border-radius:7px;background:var(--accent);
+    color:white;display:grid;place-items:center;font-weight:800;font-size:15px;
+    box-shadow: 0 2px 6px rgba(26,26,255,.35);
+    flex:none;
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  .brand-title{font-weight:700;font-size:14px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand-sub{font-size:11.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .actions{display:flex;align-items:center;gap:8px}
+  .btn{
+    appearance:none;border:1px solid var(--line);background:white;color:var(--ink);
+    font: inherit; font-size:13px; font-weight:600;
+    padding:8px 12px;border-radius:9px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px;
+    transition: transform .08s ease, background .15s ease, border-color .15s ease;
+    text-decoration:none;
+  }
+  .btn:hover{background:#f7f8fa}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:14px;height:14px}
+  .btn.primary{background:var(--ink);color:white;border-color:var(--ink)}
+  .btn.primary:hover{background:#1f222a}
+
+  main.stage{
+    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  /* The slide frame keeps an exact 16:9 ratio at all sizes.
+     Width is the smaller of: (a) available viewport width, (b) what would make height fit. */
+  .slide-wrap{
+    --max-w: min(1280px, calc(100vw - 36px));
+    --avail-h: calc(100svh - 220px);
+    width: min(var(--max-w), calc(var(--avail-h) * 16 / 9));
+    aspect-ratio: 16 / 9;
+    position:relative;
+    border-radius: 14px;
+    overflow:hidden;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    user-select:none;
+    touch-action: pan-y;
+  }
+  .slide-track{
+    position:absolute;inset:0;
+    display:flex;
+    width:100%;height:100%;
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+  }
+  .slide{
+    flex: 0 0 100%;
+    width:100%;height:100%;
+    display:block;
+    background:#f1f1f3;
+  }
+  .slide img{
+    width:100%;height:100%;
+    display:block;
+    object-fit: contain; /* preserves exact proportions */
+    background:#f1f1f3;
+  }
+
+  /* Nav controls */
+  .nav-btn{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:44px;height:44px;border-radius:50%;
+    background: rgba(255,255,255,.92);
+    border:1px solid var(--line);
+    box-shadow: 0 4px 14px rgba(0,0,0,.10);
+    display:grid;place-items:center;cursor:pointer;
+    color:var(--ink);
+    transition: opacity .15s ease, transform .08s ease;
+  }
+  .nav-btn:hover{background:white}
+  .nav-btn:active{transform:translateY(calc(-50% + 1px))}
+  .nav-btn svg{width:20px;height:20px}
+  .nav-btn.prev{left:12px}
+  .nav-btn.next{right:12px}
+  .nav-btn[disabled]{opacity:.35;cursor:not-allowed}
+
+  /* Bottom controls */
+  .controls{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    width:100%;max-width:1280px;
+    color:var(--muted);font-size:13px;
+  }
+  .counter{
+    font-variant-numeric: tabular-nums;
+    font-weight:600;color:var(--ink);
+    background:white;border:1px solid var(--line);
+    padding:6px 10px;border-radius:8px;
+    min-width:64px;text-align:center;
+  }
+  .dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:560px}
+  .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:#cfd3db;border:none;padding:0;cursor:pointer;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .dot:hover{background:#aab0bd}
+  .dot.active{background:var(--accent);transform:scale(1.25)}
+
+  footer.foot{
+    text-align:center;color:var(--muted);font-size:12px;
+    padding: 10px 16px 18px;
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 720px){
+    header.bar{padding: 10px 14px}
+    .brand-mark{width:26px;height:26px;font-size:14px}
+    .brand-title{font-size:13px}
+    .brand-sub{font-size:10.5px}
+    .btn{padding:7px 10px;font-size:12.5px}
+    main.stage{padding: 12px;gap:10px}
+    .slide-wrap{
+      --max-w: calc(100vw - 24px);
+      --avail-h: calc(100svh - 180px);
+      border-radius: 12px;
+    }
+    .nav-btn{width:38px;height:38px}
+    .nav-btn.prev{left:8px}
+    .nav-btn.next{right:8px}
+    .controls{gap:10px;font-size:12px}
+    .dots{max-width: 70vw}
+  }
+  @media (max-width: 420px){
+    .actions .btn-label{display:none}
+    .actions .btn{padding:8px;width:36px;height:36px;justify-content:center}
+  }
+
+  /* Fullscreen */
+  :fullscreen{background: #0b0b0e}
+  :fullscreen header.bar, :fullscreen .controls, :fullscreen footer.foot{display:none}
+  :fullscreen main.stage{padding:0}
+  :fullscreen .slide-wrap{
+    width: 100vw; height: 100vh; max-width:none;
+    aspect-ratio:auto;
+    border-radius:0;border:none;box-shadow:none;
+    background:#0b0b0e;
+  }
+  :fullscreen .slide{background:#0b0b0e}
+  :fullscreen .slide img{background:#0b0b0e}
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    .slide-track{transition:none}
+  }
+</style>
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">L</div>
+      <div class="brand-text">
+        <div class="brand-title">Longevity Life Academy</div>
+        <div class="brand-sub">Google Ads · Search Mockups</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="fsBtn" class="btn" type="button" aria-label="Toggle fullscreen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5"/><path d="M20 9V4h-5"/><path d="M4 15v5h5"/><path d="M20 15v5h-5"/></svg>
+        <span class="btn-label">Fullscreen</span>
+      </button>
+      <a class="btn primary" href="Longevity-Life-Academy-Google-Ads-Mockups.pdf" download aria-label="Download PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span class="btn-label">PDF</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="slide-wrap" id="wrap" role="region" aria-roledescription="carousel" aria-label="Deck slides">
+      <div class="slide-track" id="track"></div>
+      <button class="nav-btn prev" id="prevBtn" type="button" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="nav-btn next" id="nextBtn" type="button" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+    </div>
+
+    <div class="controls">
+      <div class="counter" id="counter">1 / 14</div>
+      <div class="dots" id="dots" role="tablist" aria-label="Jump to slide"></div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    Use ← → keys, swipe, or the dots to navigate · Press F for fullscreen
+  </footer>
+
+<script>
+(function(){
+  const TOTAL = 14;
+  const track   = document.getElementById('track');
+  const counter = document.getElementById('counter');
+  const dots    = document.getElementById('dots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const fsBtn   = document.getElementById('fsBtn');
+  const wrap    = document.getElementById('wrap');
+
+  // Build slides
+  for (let i = 1; i <= TOTAL; i++){
+    const n = String(i).padStart(2,'0');
+    const fig = document.createElement('figure');
+    fig.className = 'slide';
+    fig.setAttribute('role','group');
+    fig.setAttribute('aria-roledescription','slide');
+    fig.setAttribute('aria-label', `Slide ${i} of ${TOTAL}`);
+    const img = document.createElement('img');
+    img.src = `slides/slide-${n}.png`;
+    img.alt = `Slide ${i}`;
+    img.draggable = false;
+    img.loading = i <= 2 ? 'eager' : 'lazy';
+    img.decoding = 'async';
+    fig.appendChild(img);
+    track.appendChild(fig);
+
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'dot';
+    dot.setAttribute('role','tab');
+    dot.setAttribute('aria-label', `Go to slide ${i}`);
+    dot.addEventListener('click', () => go(i - 1));
+    dots.appendChild(dot);
+  }
+
+  let index = 0;
+  const dotEls = Array.from(dots.children);
+
+  function clamp(n){ return Math.max(0, Math.min(TOTAL - 1, n)); }
+
+  function render(){
+    track.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
+    counter.textContent = `${index + 1} / ${TOTAL}`;
+    dotEls.forEach((d, i) => d.classList.toggle('active', i === index));
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === TOTAL - 1;
+    if (history.replaceState){
+      history.replaceState(null, '', `#${index + 1}`);
+    }
+  }
+
+  function go(i){ index = clamp(i); render(); }
+  function next(){ go(index + 1); }
+  function prev(){ go(index - 1); }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.target && /input|textarea/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); next(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(TOTAL - 1); }
+    else if (e.key === 'f' || e.key === 'F') { toggleFs(); }
+  });
+
+  // Touch swipe
+  let touchStartX = null, touchStartY = null, touchActive = false;
+  wrap.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    touchActive = true;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, {passive:true});
+  wrap.addEventListener('touchend', (e) => {
+    if (!touchActive) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStartX;
+    const dy = t.clientY - touchStartY;
+    touchActive = false;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
+      if (dx < 0) next(); else prev();
+    }
+  });
+
+  // Fullscreen
+  function toggleFs(){
+    const el = wrap;
+    if (!document.fullscreenElement){
+      (el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen)?.call(el);
+    } else {
+      (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+    }
+  }
+  fsBtn.addEventListener('click', toggleFs);
+
+  // Deep-link via hash
+  const initial = parseInt((location.hash || '').replace('#',''), 10);
+  if (!Number.isNaN(initial)) index = clamp(initial - 1);
+  window.addEventListener('hashchange', () => {
+    const h = parseInt((location.hash || '').replace('#',''), 10);
+    if (!Number.isNaN(h)) go(h - 1);
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
